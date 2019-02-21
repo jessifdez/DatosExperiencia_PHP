@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jQuery_epigrafes.js"></script>
+<script src="js/javascript.js"></script>
+<style>
+#paneldatos, #panelexperiencia{
+display: none;
+}
+.panel-heading {cursor: pointer;}
+
+</style>
+</head> 
+<body onload="cargarOyentes();">
+<div class="container">
+<br>
+<form action="grabar_datos.php" method="GET" id="formulario">
+<div class="panel panel-danger" >
+	<div id="datos" class="panel-heading" >Datos personales +</div>
+	<div id="paneldatos" class="panel-body">
+		Nombre: <input type="text" class="form-control" name="nombre"  id="nombre"><br>
+		Email: <input type="text" class="form-control" name="email" id="email"><br><br>
+		Teléfono: <input type="text" class="form-control" name="telefono" id="telefono"><br><br>
+	</div>
+</div>
+<div class="panel panel-success">
+	<div id="experiencia" class="panel-heading">Experiencia +</div>
+	<div id="panelexperiencia" class="panel-body">
+            Experiencia:<textarea class="form-control" id="experiencia" name="experiencia" rows="5" form="formulario"></textarea>
+	</div>
+</div>
+<input type="hidden" name="accion" value="enviar"/>
+<input type="submit" class="btn btn-info" value="Enviar" id="enviar"/>
+</form>
+</div>
+</body>
+</html>
